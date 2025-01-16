@@ -4,8 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            padding:60px;
+        }
+        span{
+            visibility: hidden;
+        }
+        input
+        {
+            margin: 25px;
+            color: rgb(100, 169, 235);
+            background-color: white;
+        }
+        span{
+            border-radius: 2px;
+            background-color: rgba(65, 55, 55, 0.808);
+            width: 80px;
+            height:20px;
+            color: rgb(255, 255, 255);
+        }
+        .top
+        {
+            position: relative;
+        }
+        input#top:hover
+        {
+            &+span
+            {
+                visibility: visible;
+                position: absolute;
+                top:1px;
+                left: 16px;
+            }
+        }
+        .bottom
+        {
+            position: relative;
+        }
+        input#bottom:hover
+        {
+            &+span
+            {
+                visibility: visible;
+                position: absolute;
+                bottom:1px;
+                left: 16px;
+            }
+        }
+        .left
+        {
+            position: relative;
+        }
+        input#left:hover
+        {
+            &+span
+            {
+                visibility: visible;
+                position: absolute;
+                top:25px;
+                left:-60px;
+            }
+        }
+        .right
+        {
+            position: relative;
+        }
+        input#right:hover
+        {
+            &+span
+            {
+                visibility: visible;
+                position: absolute;
+                top:25px;
+                left:75px;
+            }
+        }
+       
+    </style>
 </head>
 <body>
-    
+    <div class="top">
+        <input type="button" value="Top" id="top">
+        <span>Tooltip Text</span>
+    </div>
+    <div class="bottom">
+        <input type="button" value="Bottom" id="bottom">
+        <span>Tooltip Text</span>
+    </div>
+    <div class="left">
+        <input type="button" value="Left" id="left">
+        <span>Tooltip Text</span>
+    </div>
+    <div class="right">
+        <input type="button" value="Right" id="right">
+        <span>Tooltip Text</span>
+    </div>
+
 </body>
 </html>
